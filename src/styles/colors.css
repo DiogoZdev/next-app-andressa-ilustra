@@ -1,0 +1,15 @@
+:root {
+  --text-dark: hsl(162, 100%, 9%);
+  --white: hsl(0, 0%, 95%);
+
+  --green: hsl(162, 56%, 46%);
+  --green-transparent: hsla(162, 56%, 46%, 0.15);
+
+  --gray-100: hsl(0, 0%, 97%);
+  --gray-200: hsl(0, 0%, 90%);
+  --gray-300: hsl(0, 0%, 80%);
+  --gray-700: hsl(0, 0%, 30%);
+
+  --svg-theme-color: brightness(0) saturate(100%) invert(66%) sepia(12%)
+    saturate(2137%) hue-rotate(111deg) brightness(92%) contrast(80%);
+}

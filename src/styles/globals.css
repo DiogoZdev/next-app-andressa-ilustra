@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Fredericka+the+Great&display=swap');
+@import url('./colors.css');
+
+* {
+  margin: unset;
+  padding: unset;
+  box-sizing: border-box;
+  border: unset;
+  outline: dotter green 2px;
+  text-decoration: unset;
+  list-style: none;
+  color: unset;
+}
+
+:root {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 16px;
+  --base-font: 'Comfortaa', sans-serif;
+  --title-font: 'Fredericka the Great', serif;
+}
+
+html, body {
+  height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: var(--title-font);
+  font-size: 70px;
+  font-weight: 400;
+  color: var(--text-dark);
+  line-height: 0.85;
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
