@@ -21,7 +21,7 @@ export const Gallery = () => {
       <style jsx>{`
         .gallery {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
           flex-wrap: wrap;
           width: 100%;
           justify-content: center;

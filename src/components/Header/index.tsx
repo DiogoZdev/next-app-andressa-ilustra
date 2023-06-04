@@ -10,12 +10,19 @@ export const Header = () => {
       <style jsx>{`
         header {
           position: relative;
-          height: calc(100vh - 4.5rem);
-           {
-            /* background: #eee; */
-          }
-          display: flex;
-          align-items: center;
+          height: calc(100vh - 3rem);
+        }
+
+        .header-title {
+          position: absolute;
+          top: calc(50% - 200px);
+          left: 0;
+        }
+
+        .header-image {
+          position: absolute;
+          top: calc(50% - 200px);
+          right: 0;
         }
 
         img {
@@ -27,29 +34,25 @@ export const Header = () => {
         .icon {
           position: absolute;
           bottom: 1rem;
-          left: 50%;
+          left: calc(50% - 12px);
           animation: move-down 1s infinite;
         }
 
         @keyframes move-down {
-          0%, 100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(1rem);
-          }
+          0%, 100% { transform: translateY(-20px) }
+          50% { transform: translateY(1rem) }
         }
 
       `}</style>
       <Container>
         <header>
+          <div className="header-image">
+            <img height={400} src="/sketch-1.png" alt="" draggable="false" />
+          </div>
           <HeaderBg />
-          <div>
+          <div className="header-title">
             <Andressa />
             <Description />
-          </div>
-          <div>
-            <img src="/sketch-1.png" alt="" draggable="false" />
           </div>
           <div className="icon">
             <FiChevronDown size={24}/>

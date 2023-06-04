@@ -6,11 +6,14 @@ export const Andressa = () => {
           font-size: clamp(3rem, 12vw, 8rem);
         }
       `}</style>
-      <h1>
-        Andressa
-        <br />
-        Araujo
-      </h1>
+
+      <div>
+        <h1>
+          Andressa
+          <br />
+          Araujo
+        </h1>
+      </div>
     </>
   );
 };

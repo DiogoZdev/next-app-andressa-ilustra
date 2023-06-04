@@ -7,7 +7,7 @@ export const Footer = () => {
     <>
       <style jsx>{`
         footer {
-          background: var(--gray-200);
+          background: var(--gray-100);
           padding-top: 7rem;
         }
 
@@ -64,7 +64,7 @@ export const Footer = () => {
 
         .copyright {
           margin-top: 1rem;
-          background: var(--gray-300);
+          background: var(--gray-200);
           padding: 1rem;
           font-size: 0.8rem;
           font-weight: bold;
