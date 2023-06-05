@@ -1,5 +1,5 @@
-import { Gallery } from "@/components/Gallery.tsx";
-import { Header } from "@/components/Header";
+import { Gallery } from "@/components/Gallery";
+import { Header } from "@/components/layout/Header";
 
 export default function Home() {
   return (

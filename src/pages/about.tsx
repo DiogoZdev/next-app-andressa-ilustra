@@ -1,4 +1,4 @@
-import { Participations } from "@/components/Participations";
+import { Participations } from "@/components/layout/Participations";
 import { Container } from "@/layouts/Container";
 
 export default function About() {
