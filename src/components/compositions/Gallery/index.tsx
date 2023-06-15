@@ -1,4 +1,4 @@
-import { ProjectsList, Project } from "@/interfaces/projectsList.interface";
+import { ProjectsList, Project } from "@/interfaces/project.interface";
 import { useEffect, useState } from "react";
 import { Display } from "../Display";
 import useProject from "@/hooks/useProject";
@@ -8,7 +8,7 @@ export const Gallery = () => {
   const { project, openProject, closeProject } = useProject();
 
   useEffect(() => {
-    const projects = loadProjects();
+    loadProjects()
   }, []);
 
   async function loadProjects() {

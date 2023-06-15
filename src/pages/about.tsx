@@ -6,7 +6,6 @@ export default function About() {
   return (
     <>
       <style jsx>{`
-
         .andressa-container {
           margin: 0 auto;
           height: 250px;
@@ -15,7 +14,7 @@ export default function About() {
           margin-bottom: 3rem;
           border-radius: 2%;
         }
-        
+
         .andressa {
           position: absolute;
           top: 0;
@@ -27,7 +26,6 @@ export default function About() {
         img {
           margin: 2rem auto;
           display: block;
-          // mix-blend-mode: soft-light;
         }
 
         h1 {
@@ -49,17 +47,16 @@ export default function About() {
       `}</style>
       <Container>
         <>
-        <div className="andressa-container">
-          <motion.img
-            src="/about/andressa.jpg"
-            initial={{ opacity: 0, x: -200, height: 250 ,  }}
-            animate={{ opacity: 1, x:  0}}
-            transition={{ duration: 1, delay: 0.5 }}
-            
-            className="andressa"
+          <h1>Sobre</h1>
+          <div className="andressa-container">
+            <motion.img
+              src="/about/andressa.jpg"
+              initial={{ opacity: 0, x: -200, height: 250 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="andressa"
             />
           </div>
-          <h1>Sobre</h1>
           <p>
             Olá! Sou a Andressa, uma apaixonada por comunicação visual, e estou
             animada para compartilhar minha paixão e talento com você. Desde

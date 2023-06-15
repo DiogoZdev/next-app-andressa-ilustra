@@ -48,7 +48,7 @@ ul {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(0deg, magenta, blue, aqua );
+  background: var(--green-600);
   border-radius: 10px;
 }
 
