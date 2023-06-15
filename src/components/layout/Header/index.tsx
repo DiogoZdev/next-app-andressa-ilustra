@@ -3,6 +3,7 @@ import { Container } from "@/layouts/Container";
 import { Description } from "./Description";
 import { Andressa } from "./Andressa";
 import { HeaderBg } from "./HeaderBackground";
+import { motion } from "framer-motion"
 
 export const Header = () => {
   return (
@@ -50,10 +51,15 @@ export const Header = () => {
             <img height={400} src="/sketch-1.png" alt="" draggable="false" />
           </div>
           <HeaderBg />
-          <div className="header-title">
+          <motion.div 
+            initial={{ opacity: 0, x: -200, y: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="header-title"
+          >
             <Andressa />
             <Description />
-          </div>
+          </motion.div>
           <div className="icon">
             <FiChevronDown size={24}/>
           </div>

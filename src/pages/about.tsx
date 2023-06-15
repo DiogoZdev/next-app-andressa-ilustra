@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Participations } from "@/components/layout/Participations";
 import { Container } from "@/layouts/Container";
 
@@ -5,15 +6,28 @@ export default function About() {
   return (
     <>
       <style jsx>{`
+
+        .andressa-container {
+          margin: 0 auto;
+          height: 250px;
+          aspect-ratio: 1;
+          position: relative;
+          margin-bottom: 3rem;
+          border-radius: 2%;
+        }
+        
         .andressa {
-          width: 30%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
           border-radius: 2%;
         }
 
         img {
           margin: 2rem auto;
           display: block;
-          mix-blend-mode: soft-light;
+          // mix-blend-mode: soft-light;
         }
 
         h1 {
@@ -35,7 +49,16 @@ export default function About() {
       `}</style>
       <Container>
         <>
-          <img src="/about/andressa.jpg" className="andressa" />
+        <div className="andressa-container">
+          <motion.img
+            src="/about/andressa.jpg"
+            initial={{ opacity: 0, x: -200, height: 250 ,  }}
+            animate={{ opacity: 1, x:  0}}
+            transition={{ duration: 1, delay: 0.5 }}
+            
+            className="andressa"
+            />
+          </div>
           <h1>Sobre</h1>
           <p>
             Olá! Sou a Andressa, uma apaixonada por comunicação visual, e estou
