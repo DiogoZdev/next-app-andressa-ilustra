@@ -37,3 +37,18 @@ ul {
   align-items: center;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+  position: absolute;
+  right: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(0deg, magenta, blue, aqua );
+  border-radius: 10px;
+}
+
