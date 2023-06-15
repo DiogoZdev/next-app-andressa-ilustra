@@ -1,7 +1,7 @@
 import { Product } from "@/interfaces/product.interface";
 import style from "./style.module.scss";
 import Image from "next/image";
-import { Button } from "../Button";
+import { Button } from "../../basics/Button";
 import { ArrowSquareOut } from "@phosphor-icons/react";
 
 interface CardProps extends Product {}
@@ -14,16 +14,10 @@ export const ProductCard = ({
 }: CardProps) => {
   return (
     <div className={style.card}>
-      <Image
-        width={350}
-        height={320}
+      <img
         src={imageUrl}
         alt={title}
-        style={{ 
-			objectFit: "cover",
-		  	objectPosition: "center",
-			alignSelf: "center",
-		}}
+        className={style.productImage}
       />
       <h3>{title}</h3>
       <i>{collection}</i>

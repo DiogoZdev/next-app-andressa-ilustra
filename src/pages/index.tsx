@@ -1,11 +1,5 @@
-import { Gallery } from "@/components/compositions/Gallery";
-import { Header } from "@/components/layout/Header";
+import { Home } from "./home";
 
-export default function Home() {
-  return (
-    <>
-      <Header></Header>
-      <Gallery />
-    </>
-  );
+export default function Index() {
+  return <Home/>;
 }
