@@ -1,4 +1,4 @@
-import { Gallery } from "@/components/Gallery";
+import { Gallery } from "@/components/compositions/Gallery";
 import { Header } from "@/components/layout/Header";
 
 export default function Home() {

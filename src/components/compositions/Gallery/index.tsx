@@ -1,8 +1,11 @@
 import { ProjectsList, Project } from "@/interfaces/projectsList.interface";
 import { useEffect, useState } from "react";
+import { Display } from "../Display";
+import useProject from "@/hooks/useProject";
 
 export const Gallery = () => {
   const [projects, setProjects] = useState<Project[]>([]);
+  const { project, openProject, closeProject } = useProject();
 
   useEffect(() => {
     const projects = loadProjects();
@@ -30,7 +33,7 @@ export const Gallery = () => {
 
         .gallery-image-container {
           position: relative;
-          aspect-ratio:34/25;
+          aspect-ratio: 34/25;
           overflow: hidden;
           cursor: pointer;
         }
@@ -44,18 +47,27 @@ export const Gallery = () => {
           transition: all 0.2s ease-in-out;
         }
 
-        .gallery-image-container:hover .image{
+        .gallery-image-container:hover .image {
           transform: scale(1.2) rotate(1deg);
         }
       `}</style>
 
-      <div className="gallery">
-        {projects.map((project) => (
-          <div className="gallery-image-container" key={project.titulo}>
-            <img src={project.thumbnail} alt={project.titulo} className="image"/>
-          </div>
-        ))}
-      </div>
+        <div className="gallery">
+          {projects.map((p) => (
+            <div
+              className="gallery-image-container"
+              key={p.titulo}
+              onClick={() => openProject(p)}
+            >
+              <img
+                src={p.thumbnail}
+                alt={p.titulo}
+                className="image"
+              />
+            </div>
+          ))}
+          {project && <Display project={project} close={closeProject} />}
+        </div>
     </>
   );
 };
