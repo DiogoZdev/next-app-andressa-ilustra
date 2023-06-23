@@ -14,7 +14,6 @@ export const Footer = () => {
                 width={180}
                 height={30}
                 alt=""
-                style={{ filter: "invert(100%)" }}
               />
             </div>
             <span className={s.headline}>Ilustrações, Design de identidade visual e outras coisas legais</span>
