@@ -13,6 +13,16 @@
   }
 }
 
+.transparent {
+  @include button;
+  background-color: var(--white-transparent);
+  color: #222;
+
+  &:hover {
+    color: var(--green-600);
+  }
+}
+
 .primary {
   @include button;
   background-color: var(--green-600);
