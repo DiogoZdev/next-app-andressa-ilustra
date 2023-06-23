@@ -1,6 +1,8 @@
 import { Project } from "@/interfaces/project.interface";
 import s from "./style.module.scss";
 import { motion } from "framer-motion";
+import { Button } from "@/components/basics/Button";
+import { X } from "@phosphor-icons/react";
 
 interface DisplayProps {
   project: Project;
@@ -20,6 +22,13 @@ export const Display = ({ project, close }: DisplayProps) => {
           animate={{ opacity: 1, translateY: 0 }}
           transition={{ duration: 0.5 }}
         >
+          <div className={s.buttonsArea}>
+            <Button
+              onClick={ close }
+              variant="transparent"
+              icon={<X size={22}/>}
+            ></Button>
+          </div>
           <h3>{ project.titulo }</h3>
           <br />
           { project.descricao.split("//").map((paragraph: string) => <p key={paragraph} >{paragraph}</p>) }

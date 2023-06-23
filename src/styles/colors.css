@@ -1,6 +1,8 @@
 :root {
   --text-dark: hsl(162, 100%, 9%);
+
   --white: hsl(0, 0%, 95%);
+  --white-transparent: hsla(0, 0%, 95%, 0.15);
 
   --green-100: hsl(162, 100%, 97%);
   --green-200: hsl(162, 100%, 92%);

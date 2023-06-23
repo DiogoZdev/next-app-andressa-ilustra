@@ -8,9 +8,10 @@
 }
 
 .card {
+  position: relative;
   padding: 1.5rem;
   background-color: #fff;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   max-width: 900px;
   margin: 0 auto;
@@ -40,4 +41,10 @@
       object-fit: contain;
     }
   }
+}
+
+.buttonsArea {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
