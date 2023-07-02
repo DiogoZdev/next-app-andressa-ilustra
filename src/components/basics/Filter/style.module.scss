@@ -1,0 +1,29 @@
+.filterArea {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.filter {
+  cursor: pointer;
+  position: relative;
+  padding: 0.5rem;
+  width: fit-content;
+  height: fit-content;
+  backdrop-filter: blur(2px);
+  border-radius: 50%;
+  z-index: 5;
+  display: grid;
+  place-content: center;
+  background: #0005;
+  color: white;
+}
+
+.filterContent {
+  position: relative;
+  z-index: 5;
+  background: #0005;
+  color: white;
+}

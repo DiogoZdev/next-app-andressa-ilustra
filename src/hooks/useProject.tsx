@@ -1,4 +1,4 @@
-import { Project } from "@/interfaces/projectsList.interface"
+import { Project } from "@/interfaces/project.interface"
 import { useState } from "react"
 
 export default function useProject() {

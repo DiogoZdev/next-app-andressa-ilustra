@@ -4,6 +4,10 @@
     
     &:hover {
         background-color: var(--gray-50);
+
+        img {
+            transform: scale(1.05) rotate(2deg);
+        }
     }
 
     h3 {
@@ -21,6 +25,7 @@
     img {
         width: 100%;
         object-fit: cover;
+        transition: transform ease 300ms;
     }
 
     Button {

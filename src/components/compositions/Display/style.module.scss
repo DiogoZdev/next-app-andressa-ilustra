@@ -19,7 +19,7 @@
   overflow-y: auto;
 
   h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: var(--base-font);
   }
 
@@ -47,4 +47,14 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
+}
+
+.displayFooter {
+  padding: 2rem;
+  margin: 0 auto;
+  width: fit-content;
+
+  p {
+    text-align: center;
+  }
 }

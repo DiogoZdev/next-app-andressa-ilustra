@@ -47,58 +47,59 @@ export const SettingsMenu = () => {
   const [language, setLanguage] = useState<string>("Português");
 
   return (
-    <>
-      <Menu.Root>
-        <Menu.Trigger style={styles.trigger}>
-          <FiSettings size={18} className=".menu"/>
-        </Menu.Trigger>
+    <div></div>
+    // <>
+    //   <Menu.Root>
+    //     <Menu.Trigger style={styles.trigger}>
+    //       <FiSettings size={18} className=".menu"/>
+    //     </Menu.Trigger>
 
-        <Menu.Portal>
-          <Menu.Content style={styles.portal}>
-            <Menu.Label style={styles.label}>idioma</Menu.Label>
-            <Menu.RadioGroup value={language} onValueChange={setLanguage}>
-              <Menu.RadioItem value="potuguese">
-                <Menu.ItemIndicator style={styles.indicator}>
-                  <FiCheck />
-                </Menu.ItemIndicator>
-                <span style={styles.item}>Português</span>
-              </Menu.RadioItem>
-              <Menu.RadioItem value="english">
-                <Menu.ItemIndicator style={styles.indicator}>
-                  <FiCheck />
-                </Menu.ItemIndicator>
-                <span style={styles.item}>English</span>
-              </Menu.RadioItem>
-            </Menu.RadioGroup>
+    //     <Menu.Portal>
+    //       <Menu.Content style={styles.portal}>
+    //         <Menu.Label style={styles.label}>idioma</Menu.Label>
+    //         <Menu.RadioGroup value={language} onValueChange={setLanguage}>
+    //           <Menu.RadioItem value="potuguese">
+    //             <Menu.ItemIndicator style={styles.indicator}>
+    //               <FiCheck />
+    //             </Menu.ItemIndicator>
+    //             <span style={styles.item}>Português</span>
+    //           </Menu.RadioItem>
+    //           <Menu.RadioItem value="english">
+    //             <Menu.ItemIndicator style={styles.indicator}>
+    //               <FiCheck />
+    //             </Menu.ItemIndicator>
+    //             <span style={styles.item}>English</span>
+    //           </Menu.RadioItem>
+    //         </Menu.RadioGroup>
 
-            <Menu.Separator style={styles.separator} />
+    //         <Menu.Separator style={styles.separator} />
 
-            <Menu.Label style={styles.label}>Tema</Menu.Label>
-            <Menu.RadioGroup value={theme} onValueChange={setTheme}>
-              <Menu.RadioItem value="light">
-                <Menu.ItemIndicator style={styles.indicator}>
-                  <FiCheck />
-                </Menu.ItemIndicator>
-                <span style={styles.item}>Claro</span>
-              </Menu.RadioItem>
-              <Menu.RadioItem value="dark">
-                <Menu.ItemIndicator style={styles.indicator}>
-                  <FiCheck />
-                </Menu.ItemIndicator>
-                <span style={styles.item}>Escuro</span>
-              </Menu.RadioItem>
-            </Menu.RadioGroup>
-          </Menu.Content>
-        </Menu.Portal>
-      </Menu.Root>
+    //         <Menu.Label style={styles.label}>Tema</Menu.Label>
+    //         <Menu.RadioGroup value={theme} onValueChange={setTheme}>
+    //           <Menu.RadioItem value="light">
+    //             <Menu.ItemIndicator style={styles.indicator}>
+    //               <FiCheck />
+    //             </Menu.ItemIndicator>
+    //             <span style={styles.item}>Claro</span>
+    //           </Menu.RadioItem>
+    //           <Menu.RadioItem value="dark">
+    //             <Menu.ItemIndicator style={styles.indicator}>
+    //               <FiCheck />
+    //             </Menu.ItemIndicator>
+    //             <span style={styles.item}>Escuro</span>
+    //           </Menu.RadioItem>
+    //         </Menu.RadioGroup>
+    //       </Menu.Content>
+    //     </Menu.Portal>
+    //   </Menu.Root>
 
-      <style jsx>{`
+    //   <style jsx>{`
 
-        .menu:hover {
-          background: var(--green-100); 
-        }
+    //     .menu:hover {
+    //       background: var(--green-100); 
+    //     }
 
-      `}</style>
-    </>
+    //   `}</style>
+    // </>
   );
 };

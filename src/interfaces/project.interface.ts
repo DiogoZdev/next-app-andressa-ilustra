@@ -9,11 +9,5 @@ export interface Project {
   criado:    string;
   imagens:   string[];
   thumbnail: string;
-  categoria: Categoria[];
-}
-
-export enum Categoria {
-  All = "all",
-  Drawings = "drawings",
-  VisualID = "visual-id",
+  categoria: string[];
 }
