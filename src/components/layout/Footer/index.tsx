@@ -8,9 +8,10 @@ export const Footer = () => {
     <footer className={s.footer}>
       <Container>
         <div className={s.footerContent}>
-          <div>
+          <div className={s.logoArea}>
             <div className={s.logo}>
               <Image src="/logo-horizontal.svg"
+                className={s.img}
                 width={180}
                 height={30}
                 alt=""
@@ -20,7 +21,7 @@ export const Footer = () => {
           </div>
           <div className={s.links}>
             <div>
-              <h3>Navegue</h3>
+              <h3 className={s.h3}>Navegue</h3>
               <ul>
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/about">Sobre</Link></li>
@@ -31,9 +32,9 @@ export const Footer = () => {
               <h3>Mídias</h3>
               <ul>
                 <li><Link target="_blank" href="https://instagram.com/andressailustra.art">Instagram</Link></li>
-                <li><Link target="_blank" href="https://behance.net/andressaaraujo4">Beance</Link></li>
+                <li><Link target="_blank" href="https://behance.net/andressaaraujo4">Behance</Link></li>
                 <li><Link target="_blank" href="https://facebook.com/amaarteedesign">Facebook</Link></li>
-                <li><Link target="_blank" href="https://www.artstation.com/andressaraujo">Artstations</Link></li>
+                <li><Link target="_blank" href="https://www.artstation.com/andressaraujo">Artstation</Link></li>
               </ul>
             </div>
           </div>

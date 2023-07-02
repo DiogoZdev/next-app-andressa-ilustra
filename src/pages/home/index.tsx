@@ -3,6 +3,7 @@ import { Gallery }  from "@/components/compositions/Gallery";
 
 import { GetStaticProps } from "next";
 import { ProjectsList } from "@/interfaces/project.interface";
+import { Contact } from "@/components/layout/Contact";
 
 export const getStaticProps: GetStaticProps = async () => {
   const { projects } = await fetch(
@@ -19,6 +20,7 @@ export const Home = () => {
     <>
       <Header />
       <Gallery />
+      <Contact />
     </>
   );
 };

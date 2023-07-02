@@ -45,7 +45,8 @@ export const Display = ({ project, close }: DisplayProps) => {
         ))}
         <div className={s.displayFooter}>
           <p>Obrigada!</p>
-          <Image src="/logo-horizontal.svg" width={180} height={30} alt="Andressa Araujo" />
+          <Image src="/logo-horizontal.svg" width={180} height={30} alt="Andressa Araujo" className={s.image} />
+          <p>cnpj 40.068.642/0001-47</p>
         </div>
       </motion.div>
     </motion.div>
