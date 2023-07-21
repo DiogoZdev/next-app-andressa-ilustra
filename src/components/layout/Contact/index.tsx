@@ -17,9 +17,9 @@ export const Contact = () => {
           </div>
           <ul className={s.infoList}>
             <li>
-              <a href="mailto:araujoandressa2018@gmail.com">
+              <a href="mailto:contato@andressailustra.art">
                 <EnvelopeOpen size={22} className={s.icon} />
-                araujoandressa2018@gmail.com
+                contato@andressailustra.art
               </a>
             </li>
             <li>
