@@ -1,0 +1,17 @@
+.card {
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
+    background-color: var(--yellow-200);
+}
+
+.label {
+    font-size: 30px;
+    color: var(--yellow-700);
+    margin-bottom: 1rem;
+}
+
+.paragraph {
+    line-height: 2;
+    text-indent: 2ch;
+}

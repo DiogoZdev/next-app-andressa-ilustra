@@ -1,15 +1,14 @@
 @mixin button {
   cursor: pointer;
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 0.5rem;
-  padding: 0.5em 1.5em;
+  padding: 0.5em 1em;
   font-size: var(--md);
   border-radius: 50px;
+  font-weight: 900;
 
   &:hover {
-    filter: brightness(0.9);
+    filter: brightness(0.95);
   }
 }
 
@@ -37,6 +36,6 @@
 
 .danger {
   @include button;
-  background-color: var(--red-500);
+  background-color: var(--red-600);
   color: white;
 }
