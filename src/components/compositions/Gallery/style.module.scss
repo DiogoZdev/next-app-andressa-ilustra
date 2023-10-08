@@ -9,13 +9,21 @@
 
   .galleryImageContainer {
     position: relative;
-    aspect-ratio: 34/25;
+    aspect-ratio: 7/5;
     overflow: hidden;
     cursor: pointer;
 
     &:hover .image {
         transform: scale(1.2) rotate(1deg);
       }
+      
+      &:nth-child(1),
+      &:nth-child(2)
+      {
+        grid-column: span 2;
+        grid-row: span 2;
+        filter: blur(0.8px);
+    }
   }
 
   .image {
