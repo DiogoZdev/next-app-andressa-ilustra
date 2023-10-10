@@ -29,7 +29,7 @@ export const Gallery = () => {
             onClick={() => openProject(p)}
           >
             <img
-              src={p.thumbnail}
+              src={p.imagens[0]}
               alt={p.titulo}
               className={s.image}
             />
