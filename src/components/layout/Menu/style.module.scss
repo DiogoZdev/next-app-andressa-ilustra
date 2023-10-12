@@ -1,0 +1,92 @@
+.nav {
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .name {
+        display: block;
+        width: fit-content;
+        filter: invert(80%);
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+.menu_icon {
+    display: none;
+    position: absolute;
+    padding: 3px 5px;
+    border-radius: 50%;
+    background-color: white;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    z-index: 9;
+
+    @media screen and (max-width: 900px) {
+        display: block;
+    }
+}
+
+.center {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    .name_center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .links_box {
+        display: none;
+        font-size: 1.2rem;
+    }
+
+    @media (min-width: 900px) {
+        grid-template-columns: repeat( 3, 1fr );
+
+        .links_box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+             
+            a:hover {
+                color: var(--green-700);
+                text-decoration: underline;
+                text-underline-offset: 10px;
+            }
+        }
+    }
+
+}
+
+.mobile_menu {
+    position: absolute;
+    inset: 0;
+    background-color: var(--blue-900);
+    z-index: 10;
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.links {
+    display: grid;
+    gap: 1rem;
+}
+
+.close {
+    color: var(--red-400);
+    cursor: pointer;
+}

@@ -2,7 +2,7 @@
   cursor: pointer;
   display: flex;
   gap: 0.5rem;
-  padding: 0.5em 1em;
+  padding: 0.5em 0.8em;
   font-size: var(--md);
   border-radius: 50px;
   font-weight: 900;
@@ -36,6 +36,10 @@
 
 .danger {
   @include button;
-  background-color: var(--red-600);
+  background-color: #0002;
   color: white;
+
+  &:hover {
+    color: var(--red-400);
+  }
 }

@@ -16,7 +16,6 @@
     aspect-ratio: 7/5;
     overflow: hidden;
     cursor: pointer;
-    filter: blur(0.8px);
 
     &:hover .image {
         transform: scale(1.2) rotate(1deg);
