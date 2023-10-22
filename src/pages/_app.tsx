@@ -2,6 +2,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Menu } from "@/components/layout/Menu";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
+import { Contact } from "@/components/layout/Contact";
 import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
     </Head>
     <Menu/>
     <Component {...pageProps} />
+    <Contact />
     <Footer />
     </>
   );

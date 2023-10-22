@@ -1,6 +1,4 @@
 import { Gallery }  from "@/components/compositions/Gallery";
-import { Contact } from "@/components/layout/Contact";
-
 
 export default function Home() {
 
@@ -9,7 +7,6 @@ export default function Home() {
       <div id="gallery">
         <Gallery/>
       </div>
-      <Contact />
     </>
   );
 };
