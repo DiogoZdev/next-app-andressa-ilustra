@@ -1,4 +1,4 @@
-import { Project } from "@/interfaces/project.interface";
+import { IProject } from "@/interfaces/project.interface";
 import s from "./style.module.scss";
 import { motion } from "framer-motion";
 import { Button } from "@/components/basics/Button";
@@ -6,7 +6,7 @@ import { X } from "@phosphor-icons/react";
 import Image from "next/image";
 
 interface DisplayProps {
-  project: Project;
+  project: IProject;
   close: () => void;
 }
 
@@ -27,7 +27,6 @@ export const Display = ({ project, close }: DisplayProps) => {
         ></Button>
       </div>
 
-      
       <div className={s.cardInfo}>
         <h3>{project.titulo}</h3>
         <hr className={s.separator} />
@@ -38,11 +37,26 @@ export const Display = ({ project, close }: DisplayProps) => {
       </div>
 
       <div className={s.cardImages}>
-        {project.imagens.map((img: string) => (
-          <div className={s.imgContainer} key={img}>
-            <img src={img} alt={img} />
-          </div>
-        ))}
+        {project.imagens.map((img: string) => {
+          if (!img.includes("embed")) {
+            return (
+              <div className={s.imgContainer} key={img}>
+                <img src={img} alt={img} />
+              </div>
+            );
+          } else {
+            return (
+              <iframe
+                style={{ width: "100%", height: "100dvh" }}
+                src={img}
+                key={img}
+                title="YouTube video player"
+                allow="encrypted-media; gyroscope; picture-in-picture; web-share"
+              ></iframe>
+            );
+          }
+        })}
+
         <div className={s.displayFooter}>
           <p>Obrigada!</p>
           <Image
