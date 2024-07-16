@@ -26,10 +26,10 @@ export const Menu = () => {
 
 
   const right_links: link[] = [
-    {
-      label: "Loja",
-      url: "/products"
-    }
+    // {
+    //   label: "Loja",
+    //   url: "/products"
+    // }
   ]
 
   return (
