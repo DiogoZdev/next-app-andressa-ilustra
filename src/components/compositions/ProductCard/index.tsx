@@ -1,37 +1,33 @@
 import { Product } from "@/interfaces/product.interface";
-import style from "./style.module.scss";
+import s from "./style.module.scss";
 import Image from "next/image";
 import { Button } from "../../basics/Button";
 import { ArrowSquareOut } from "@phosphor-icons/react";
 
-interface CardProps extends Product {}
+export const ProductCard = ({ collection, imageUrl, title, url }: Product) => {  return (
+    <article className={s.card}>
+      <div className={s.imageWrapper}>
+        <Image
+          src={imageUrl}
+          alt={title}
+          fill
+          sizes="(min-width: 1200px) 30vw, (min-width: 700px) 45vw, 90vw"
+          className={s.productImage}
+        />
+      </div>
 
-export const ProductCard = ({
-  collection,
-  imageUrl,
-  title,
-  url,
-}: CardProps) => {
-  return (
-    <div className={style.card}>
-      <img
-        src={imageUrl}
-        alt={title}
-        className={style.productImage}
+      <div className={s.info}>
+        <span className={s.collection}>{collection}</span>
+        <h3 className={s.title}>{title}</h3>
+      </div>
+
+      <Button
+        icon={<ArrowSquareOut size={20} />}
+        variant="primary"
+        text="Comprar"
+        ariaLabel={`Comprar ${title}`}
+        onClick={() => window.open(url, "_blank", "noopener,noreferrer")}
       />
-      <h3>{title}</h3>
-      <i>{collection}</i>
-	  <Button
-	  	icon={<ArrowSquareOut size={22}/>}
-	  	variant="primary"
-		text="Comprar"
-		onClick={() => {
-			const a = document.createElement('a');
-			a.href = url;
-			a.target = '_blank';
-			a.click();
-		}}
-	  />
-    </div>
+    </article>
   );
 };

@@ -3,45 +3,69 @@ import { Container } from "@/layouts/Container";
 import Image from "next/image";
 import Link from "next/link";
 
+const NAV_LINKS = [
+  { label: "Home", href: "/" },
+  { label: "Sobre", href: "/about" },
+  { label: "Produtos", href: "/products" },
+];
+
+const SOCIAL_LINKS = [
+  { label: "Instagram", href: "https://instagram.com/andressailustra.art" },
+  { label: "Behance", href: "https://behance.net/andressaaraujo4" },
+  { label: "Facebook", href: "https://facebook.com/amaarteedesign" },
+  { label: "Artstation", href: "https://www.artstation.com/andressaraujo" },
+];
+
 export const Footer = () => {
   return (
     <footer className={s.footer}>
       <Container>
         <div className={s.footerContent}>
-          <div className={s.logoArea}>
-            <div className={s.logo}>
-              <Image src="/logo-horizontal.svg"
-                className={s.img}
+          <div className={s.brand}>
+            <Link href="/" className={s.logo} aria-label="Andressa Araujo — início">
+              <Image
+                src="/horizontal-name.svg"
                 width={180}
                 height={30}
-                alt=""
+                alt="Andressa Araujo"
               />
-            </div>
-            <span className={s.headline}>Ilustrações, Design de identidade visual e outras coisas legais</span>
+            </Link>
+            <p className={s.headline}>
+              Ilustrações, Design de identidade visual e outras coisas legais
+            </p>
           </div>
+
           <div className={s.links}>
-            <div>
-              <h3 className={s.h3}>Navegue</h3>
+            <nav className={s.linkGroup} aria-label="Navegação do rodapé">
+              <h3>Navegue</h3>
               <ul>
-                <li><Link href="/">Home</Link></li>
-                <li><Link href="/about">Sobre</Link></li>
-                <li><Link href="/products">Produtos</Link></li>
+                {NAV_LINKS.map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href}>{link.label}</Link>
+                  </li>
+                ))}
               </ul>
-            </div>
-            <div>
+            </nav>
+
+            <nav className={s.linkGroup} aria-label="Redes sociais">
               <h3>Mídias</h3>
               <ul>
-                <li><Link target="_blank" href="https://instagram.com/andressailustra.art">Instagram</Link></li>
-                <li><Link target="_blank" href="https://behance.net/andressaaraujo4">Behance</Link></li>
-                <li><Link target="_blank" href="https://facebook.com/amaarteedesign">Facebook</Link></li>
-                <li><Link target="_blank" href="https://www.artstation.com/andressaraujo">Artstation</Link></li>
+                {SOCIAL_LINKS.map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href} target="_blank" rel="noreferrer">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
-            </div>
+            </nav>
           </div>
         </div>
       </Container>
+
       <div className={s.copyright}>
-        &copy; Copyright {new Date().getFullYear()}
+        &copy; {new Date().getFullYear()} Andressa Araujo. Todos os direitos
+        reservados.
       </div>
     </footer>
   );

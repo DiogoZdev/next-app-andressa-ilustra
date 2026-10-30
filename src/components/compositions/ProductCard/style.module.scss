@@ -1,35 +1,58 @@
 .card {
-    padding: 2rem 0;
-    border-radius: 1.5rem;
-    
-    &:hover {
-        background-color: var(--gray-50);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
 
-        img {
-            transform: scale(1.05) rotate(2deg);
-        }
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+
+    .productImage {
+      transform: scale(1.05);
     }
+  }
+}
 
-    h3 {
-        font-family: var(--consolaa);
-        font-size: 1.5rem;
-        text-align: center;
-    }
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--cream-dark);
+}
 
-    i {
-        display: block;
-        width: fit-content;
-        margin: 0 auto;
-    }
+.productImage {
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
 
-    img {
-        width: 100%;
-        object-fit: cover;
-        transition: transform ease 300ms;
-    }
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  text-align: center;
+}
 
-    Button {
-        margin: 1rem auto 0;
-    }
+.collection {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green-600);
+}
 
+.title {
+  font-family: var(--title-font);
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text-dark);
 }

@@ -1,45 +1,74 @@
 @mixin button {
   cursor: pointer;
-  display: flex;
-  gap: 0.5rem;
-  padding: 0.5em 0.8em;
-  font-size: var(--md);
-  border-radius: 50px;
-  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.1rem;
+  font-family: var(--base-font);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border: none;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  line-height: 1;
+  white-space: nowrap;
 
-  &:hover {
-    filter: brightness(0.95);
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 }
 
 .transparent {
   @include button;
-  background-color: var(--white-transparent);
-  color: #222;
+  background-color: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--cream-dark);
 
   &:hover {
-    color: var(--green-600);
+    background-color: var(--cream-dark);
+    color: var(--text-dark);
+    border-color: transparent;
   }
 }
 
 .primary {
   @include button;
-  background-color: var(--green-600);
-  color: white
+  background-color: var(--green-500);
+  color: white;
+  box-shadow: 0 2px 8px var(--green-transparent);
+
+  &:hover {
+    background-color: var(--green-600);
+    box-shadow: 0 4px 16px var(--green-transparent-hover);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
 }
 
 .secondary {
   @include button;
-  background-color: var(--gray-100);
-  color: black;
+  background-color: var(--cream-dark);
+  color: var(--text-dark);
+
+  &:hover {
+    background-color: var(--gray-200);
+  }
 }
 
 .danger {
   @include button;
-  background-color: #0002;
-  color: white;
+  background-color: hsla(0, 0%, 100%, 0.12);
+  color: rgba(255,255,255,0.7);
+  padding: 0.5rem;
 
   &:hover {
+    background-color: hsla(350, 72%, 58%, 0.2);
     color: var(--red-400);
   }
 }

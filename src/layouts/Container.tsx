@@ -1,17 +1,12 @@
-import { ReactElement } from "react";
+import { ReactNode } from "react";
+import s from "./Container.module.scss";
 
-export const Container = ({ children }: { children: ReactElement }) => {
-  return (
-    <>
-      <style jsx>{`
-        .container {
-          width: 100%;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 1rem;
-        }
-      `}</style>
-      <div className="container">{children}</div>
-    </>
-  );
+export const Container = ({
+  children,
+  className = "",
+}: {
+  children: ReactNode;
+  className?: string;
+}) => {
+  return <div className={`${s.container} ${className}`.trim()}>{children}</div>;
 };

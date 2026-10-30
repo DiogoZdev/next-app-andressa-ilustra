@@ -1,40 +1,55 @@
-import style from "./style.module.scss";
+import s from "./style.module.scss";
+import Image from "next/image";
+import Link from "next/link";
+import Head from "next/head";
 import { Participations } from "@/components/layout/Participations";
 import { Container } from "@/layouts/Container";
-import { motion } from "framer-motion"
 
 export default function About() {
   return (
     <Container>
       <>
-        <div className={style.text_wrapper}>
-          <div className={style.text_area}>
-            <h1 className={style.h1}>Sobre</h1>
-            <p className={style.p}>
-              Olá,
-            </p>
-            <p className={style.p}>
+        <Head>
+          <title>Sobre — Andressa Araujo</title>
+        </Head>
+        <section className={s.about}>
+          <div className={s.textColumn}>
+            <span className={s.eyebrow}>Ilustração &amp; design</span>
+            <h1 className={s.title}>Sobre</h1>
+
+            <p className={s.lead}>Olá,</p>
+            <p className={s.lead}>
               me chamo Andressa e sou apaixonada por arte e design.
             </p>
-            <p className={style.p}>
-              Meu trabalho consiste em ajudar a agregar valor, aumentar a visibilidade de marcas,
-              pessoas e projetos por meio da ilustração, do design e criatividade
+            <p>
+              Meu trabalho consiste em ajudar a agregar valor e aumentar a
+              visibilidade de marcas, pessoas e projetos por meio da ilustração,
+              do design e da criatividade.
             </p>
-            <p className={style.p}>
-            Vem, me conte o que você precisa
-            </p>
-            <hr style={{ marginTop: "4rem" }} />
-            <h1 className={style.h1}>Participações</h1>
-            <Participations></Participations>
+            <p>Vem, me conte o que você precisa.</p>
 
+            <Link href="#contact" className={s.cta}>
+              Vamos conversar
+            </Link>
           </div>
-          <div className={style.image}>
-            <img
+
+          <div className={s.imageWrapper}>
+            <Image
               src="/about/vertical-andressa.png"
+              alt="Retrato de Andressa Araujo"
+              fill
+              priority
+              sizes="(min-width: 900px) 40vw, 100vw"
+              className={s.image}
             />
           </div>
-        </div>
+        </section>
+
+        <section className={s.participations}>
+          <h2 className={s.sectionTitle}>Participações</h2>
+          <Participations />
+        </section>
       </>
     </Container>
   );
-};
+}

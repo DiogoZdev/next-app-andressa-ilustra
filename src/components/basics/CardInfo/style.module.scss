@@ -1,17 +1,29 @@
 .card {
-    padding: 2rem;
-    border-radius: .5rem;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
-    background-color: var(--yellow-200);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-lg);
+  background: var(--yellow-100);
+  border: 1px solid var(--yellow-200);
+  box-shadow: var(--shadow-sm);
+
+  @media (max-width: 550px) {
+    padding: var(--space-md);
+  }
 }
 
 .label {
-    font-size: 30px;
-    color: var(--yellow-700);
-    margin-bottom: 1rem;
+  font-family: var(--title-font);
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  font-weight: 400;
+  color: var(--yellow-800);
+  margin-bottom: var(--space-sm);
 }
 
 .paragraph {
-    line-height: 2;
-    text-indent: 2ch;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+
+  & + & {
+    margin-top: 0.5rem;
+  }
 }

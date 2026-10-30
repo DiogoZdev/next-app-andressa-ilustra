@@ -1,78 +1,84 @@
 :root {
-  --text-dark: hsl(162, 100%, 9%);
+  --text-dark: hsl(162, 20%, 10%);
+  --text-muted: hsl(162, 8%, 38%);
+  --text-light: hsl(162, 5%, 60%);
 
-  --white: hsl(0, 0%, 95%);
-  --white-transparent: hsla(0, 0%, 95%, 0.15);
+  --cream: hsl(42, 30%, 97%);
+  --cream-dark: hsl(42, 20%, 93%);
+  --white: hsl(0, 0%, 100%);
+  --white-transparent: hsla(0, 0%, 100%, 0.7);
 
-  --blue:200;
-  --green:160;
-  --yellow:60;
-  --red:350;
+  --blue:  200;
+  --green: 158;
+  --yellow: 48;
+  --red: 350;
 
-  --light-50: 95%;
-  --light-100: 90%;
-  --light-200: 80%;
-  --light-300: 70%;
-  --light-400: 60%;
-  --light-500: 50%;
-  --light-600: 40%;
-  --light-700: 30%;
-  --light-800: 20%;
+  --light-50: 97%;
+  --light-100: 93%;
+  --light-200: 84%;
+  --light-300: 72%;
+  --light-400: 58%;
+  --light-500: 46%;
+  --light-600: 36%;
+  --light-700: 26%;
+  --light-800: 17%;
   --light-900: 10%;
 
-  --green-100: hsl(var(--green), 100%, var(--light-100));
-  --green-200: hsl(var(--green), 100%, var(--light-200));
-  --green-300: hsl(var(--green), 100%, var(--light-300));
-  --green-400: hsl(var(--green), 100%, var(--light-400));
-  --green-500: hsl(var(--green), 56%, var(--light-500));
-  --green-600: hsl(var(--green), 56%, var(--light-600));
-  --green-700: hsl(var(--green), 56%, var(--light-700));
-  --green-800: hsl(var(--green), 56%, var(--light-800));
-  --green-900: hsl(var(--green), 56%, var(--light-900));
+  --green-50:  hsl(var(--green), 60%, var(--light-50));
+  --green-100: hsl(var(--green), 60%, var(--light-100));
+  --green-200: hsl(var(--green), 58%, var(--light-200));
+  --green-300: hsl(var(--green), 55%, var(--light-300));
+  --green-400: hsl(var(--green), 52%, var(--light-400));
+  --green-500: hsl(var(--green), 50%, var(--light-500));
+  --green-600: hsl(var(--green), 48%, var(--light-600));
+  --green-700: hsl(var(--green), 46%, var(--light-700));
+  --green-800: hsl(var(--green), 44%, var(--light-800));
+  --green-900: hsl(var(--green), 42%, var(--light-900));
 
-  --yellow-100: hsl(var(--yellow), 100%, var(--light-100));
-  --yellow-200: hsl(var(--yellow), 100%, var(--light-200));
-  --yellow-300: hsl(var(--yellow), 100%, var(--light-300));
-  --yellow-400: hsl(var(--yellow), 100%, var(--light-400));
-  --yellow-500: hsl(var(--yellow), 56%, var(--light-500));
-  --yellow-600: hsl(var(--yellow), 56%, var(--light-600));
-  --yellow-700: hsl(var(--yellow), 56%, var(--light-700));
-  --yellow-800: hsl(var(--yellow), 56%, var(--light-800));
-  --yellow-900: hsl(var(--yellow), 56%, var(--light-900));
+  --yellow-100: hsl(var(--yellow), 80%, var(--light-100));
+  --yellow-200: hsl(var(--yellow), 80%, var(--light-200));
+  --yellow-300: hsl(var(--yellow), 75%, var(--light-300));
+  --yellow-400: hsl(var(--yellow), 70%, var(--light-400));
+  --yellow-500: hsl(var(--yellow), 65%, var(--light-500));
+  --yellow-600: hsl(var(--yellow), 60%, var(--light-600));
+  --yellow-700: hsl(var(--yellow), 55%, var(--light-700));
+  --yellow-800: hsl(var(--yellow), 50%, var(--light-800));
+  --yellow-900: hsl(var(--yellow), 45%, var(--light-900));
 
-  --blue-100: hsl(var(--blue), 100%, var(--light-100));
-  --blue-200: hsl(var(--blue), 100%, var(--light-200));
-  --blue-300: hsl(var(--blue), 100%, var(--light-300));
-  --blue-400: hsl(var(--blue), 100%, var(--light-400));
-  --blue-500: hsl(var(--blue), 56%, var(--light-500));
-  --blue-600: hsl(var(--blue), 56%, var(--light-600));
-  --blue-700: hsl(var(--blue), 56%, var(--light-700));
-  --blue-800: hsl(var(--blue), 56%, var(--light-800));
-  --blue-900: hsl(var(--blue), 56%, var(--light-900));
+  --blue-100: hsl(var(--blue), 60%, var(--light-100));
+  --blue-200: hsl(var(--blue), 58%, var(--light-200));
+  --blue-300: hsl(var(--blue), 55%, var(--light-300));
+  --blue-400: hsl(var(--blue), 52%, var(--light-400));
+  --blue-500: hsl(var(--blue), 50%, var(--light-500));
+  --blue-600: hsl(var(--blue), 48%, var(--light-600));
+  --blue-700: hsl(var(--blue), 46%, var(--light-700));
+  --blue-800: hsl(var(--blue), 44%, var(--light-800));
+  --blue-900: hsl(var(--blue), 42%, var(--light-900));
 
-  --red-100: hsl(var(--red), 100%, var(--light-100));
-  --red-200: hsl(var(--red), 100%, var(--light-200));
-  --red-300: hsl(var(--red), 100%, var(--light-300));
-  --red-400: hsl(var(--red), 100%, var(--light-400));
-  --red-500: hsl(var(--red), 56%, var(--light-500));
-  --red-600: hsl(var(--red), 56%, var(--light-600));
-  --red-700: hsl(var(--red), 56%, var(--light-700));
-  --red-800: hsl(var(--red), 56%, var(--light-800));
-  --red-900: hsl(var(--red), 56%, var(--light-900));
+  --red-100: hsl(var(--red), 80%, var(--light-100));
+  --red-200: hsl(var(--red), 78%, var(--light-200));
+  --red-300: hsl(var(--red), 75%, var(--light-300));
+  --red-400: hsl(var(--red), 72%, var(--light-400));
+  --red-500: hsl(var(--red), 68%, var(--light-500));
+  --red-600: hsl(var(--red), 62%, var(--light-600));
+  --red-700: hsl(var(--red), 58%, var(--light-700));
+  --red-800: hsl(var(--red), 54%, var(--light-800));
+  --red-900: hsl(var(--red), 50%, var(--light-900));
 
-  --green-transparent: hsla(162, 56%, 46%, 0.15);
+  --green-transparent: hsla(158, 50%, 46%, 0.12);
+  --green-transparent-hover: hsla(158, 50%, 46%, 0.20);
 
-  --gray-50: hsl(0, 0%, var(--light-50));
-  --gray-100: hsl(0, 0%, var(--light-100));
-  --gray-200: hsl(0, 0%, var(--light-200));
-  --gray-300: hsl(0, 0%, var(--light-300));
-  --gray-400: hsl(0, 0%, var(--light-400));
-  --gray-500: hsl(0, 0%, var(--light-500));
-  --gray-600: hsl(0, 0%, var(--light-600));
-  --gray-700: hsl(0, 0%, var(--light-700));
-  --gray-800: hsl(0, 0%, var(--light-800));
-  --gray-900: hsl(0, 0%, var(--light-900));
+  --gray-50:  hsl(162, 5%, var(--light-50));
+  --gray-100: hsl(162, 5%, var(--light-100));
+  --gray-200: hsl(162, 5%, var(--light-200));
+  --gray-300: hsl(162, 5%, var(--light-300));
+  --gray-400: hsl(162, 5%, var(--light-400));
+  --gray-500: hsl(162, 5%, var(--light-500));
+  --gray-600: hsl(162, 5%, var(--light-600));
+  --gray-700: hsl(162, 5%, var(--light-700));
+  --gray-800: hsl(162, 5%, var(--light-800));
+  --gray-900: hsl(162, 5%, var(--light-900));
 
-  --svg-theme-color: brightness(0) saturate(100%) invert(66%) sepia(12%)
-    saturate(2137%) hue-rotate(111deg) brightness(92%) contrast(80%);
+  --svg-theme-color: brightness(0) saturate(100%) invert(44%) sepia(18%)
+    saturate(1200%) hue-rotate(118deg) brightness(88%) contrast(82%);
 }

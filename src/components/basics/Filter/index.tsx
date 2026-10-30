@@ -2,29 +2,40 @@ import { SlidersHorizontal } from "@phosphor-icons/react";
 import style from "./style.module.scss";
 import { useState } from "react";
 
+const FILTERS = ["all", "drawing", "visual-id"];
+
 export const Filter = () => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
-
-	const filters: string[] = [
-		"all",
-		"drawing",
-		"visual-id"
-	];
+  const [selected, setSelected] = useState(FILTERS[0]);
 
   return (
     <div className={style.filterArea}>
-      <div
+      <button
+        type="button"
         className={style.filter}
         onClick={() => setIsFilterOpen(!isFilterOpen)}
+        aria-label="Filtrar projetos"
+        aria-expanded={isFilterOpen}
       >
         <SlidersHorizontal size={24} />
-      </div>
+      </button>
+
       {isFilterOpen && (
         <div className={style.filterContent}>
-					<ul>
-						<li></li>
-					</ul>
-				</div>
+          <ul>
+            {FILTERS.map((filter) => (
+              <li key={filter}>
+                <button
+                  type="button"
+                  className={selected === filter ? style.active : undefined}
+                  onClick={() => setSelected(filter)}
+                >
+                  {filter}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
     </div>
   );

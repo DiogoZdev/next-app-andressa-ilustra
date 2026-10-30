@@ -1,12 +1,62 @@
-.h1 {
-    font-size: 3rem;
-    width: fit-content;
-    margin: 2rem auto;
-  }
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-xl) 0 var(--space-md);
+}
 
-  .productsArea {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--green-600);
+  margin-bottom: var(--space-sm);
+}
+
+.title {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.subtitle {
+  max-width: 46ch;
+  margin-top: var(--space-sm);
+  font-size: 0.95rem;
+}
+
+.productsArea {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-lg);
+  padding: var(--space-lg) 0 var(--space-2xl);
+}
+
+.skeleton {
+  height: 420px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    100deg,
+    var(--cream-dark) 30%,
+    var(--cream) 50%,
+    var(--cream-dark) 70%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+
+  @keyframes shimmer {
+    from {
+      background-position: 150% 0;
+    }
+    to {
+      background-position: -50% 0;
+    }
   }
+}
+
+.error {
+  padding: var(--space-xl) 0;
+  text-align: center;
+}
